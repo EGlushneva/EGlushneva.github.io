@@ -8,7 +8,9 @@
     
      <meta property="og:title" content="Это моя первая страница...">
       
-    <title>Андрей Браун - Веб-разработчик</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+     <title>Андрей Браун - Веб-разработчик</title>
 </head>
 <body>
     <header>
@@ -31,118 +33,215 @@
         <input type="submit" value="Мои работы">
     </div></div>
     
-    <div>
-        <h2>ОБО МНЕ</h2>
-        <img src="img/%D1%84%D0%BE%D1%82%D0%BA%D0%B0.png" alt="Изображение"><br>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante <br>
-facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh.</p> <br>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante <br>
-facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh. <br>
-   <input type="submit" value="Скачать резюме"></div>
-   
-   <div>
-       <h2>ЧТО Я УМЕЮ</h2>
-       <table>
-              <tr>
-               <th>Веб-дизайн</th>
-               <th>Разработка</th>
-               <th>CEO-Оптимизация</th>
-               <th>Маркетинг</th>
-           </tr>
-           <tr>
-               <td>Lorem ipsum dolor sit amet placerat <br> facilisis felis mi in tempus eleifend <br> pellentesque natoque etiam. </td>
-               <td>Lorem ipsum dolor sit amet placerat <br> facilisis mi in tempus eleifend <br> pellentesque.</td>
-               <td>Lorem ipsum dolor sit amet placerat <br> facilisis felis mi in tempus eleifend <br> pellentesque natoque etiam.</td>
-               <td>Lorem ipsum dolor sit amet placerat <br> facilisis felis mi in tempus eleifend <br> pellentesque natoque .</td>
-           </tr>
-        
-       </table>
+    <div class="description">
+        <h2>Обо мне</h2>
+        <span id="line"></span>
+        <img class="foto" src="img/foto.png" alt="Изображение">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante
+            facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh.</p> 
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante
+            facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh.</p>   
+        <input type="submit" value="Скачать резюме" class="button">
+            
+    </div>
+
+   <div class="skills">
+            <h2>Что я умею</h2>
+             <span id="line"></span>
+
+        <div class="big_block">
+            <div class="block">
+                 <img src="img/laptop.png" alt="Изображение">
+                 <p>Веб-дизайн</p>
+                 <span>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.</span>
+             </div>
+
+             <div class="block">
+                <img src="img/sign.png" alt="Изображение">
+                <p>Разработка</p>
+                <span>Lorem ipsum dolor sit amet placerat facilisis mi in tempus eleifend pellentesque.</span>
+             </div>
+
+            <div class="block">
+                <img src="img/rocket.png" alt="Изображение">
+                <p>CEO-Оптимизация</p>
+                <span>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.</span>
+              </div>
+
+             <div class="block">
+                <img src="img/gramophone.png" alt="Изображение">
+                <p>Маркетинг</p>
+                <span>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque.</span>
+             </div>  
+        </div>     
    </div>
     
-    <div>
-        <h2>КЕЙСЫ</h2>
+    <div class="cases">
+        <div class="cases_title">
+            <h2>Кейсы</h2>
+        <span id="line"></span>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed Dapibus leo nec ornare diamcoccodo nibh ante facilisis.</p>
-        <img src="img/%D1%84%D0%BE%D1%82%D0%BA%D0%B02.png" alt="Изображение">
-        <table>
-            <tr>
-                <td><h4>CLIENT:</h4></td>
-                <td><h3>Название проекта</h3></td>
-            </tr>
-            <tr>
-                <td>Какая-то компания</td>
-                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit., sed do eiusmod tempor incididunt ut labore et dolore magna <br> aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</td>
-            </tr>
-            <tr>
-                <td><h4>WEBSITE:</h4></td>
-            </tr>
-            <tr>
-                <td>http://www.somedomain.com</td>
-            </tr>
-        </table>
-        <input type="submit" value="VISIT LIVE SITE">
+        </div>
+        
+        <p id="examp"><img src="img/examp.jpg" alt="Изображение"></p> 
+
+        <div class="example">
+            <div class="client">
+                <p>Client:</p>
+                <span>Какая-то компания</span>
+                <p>Website:</p>
+                <span>http://www.somedomain.com</span> <br>
+                <input type="submit" value="Visit live site" class="site">
+            </div>
+    
+            <div class="name_project">
+                <p>Название проекта</p>
+                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit., sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span>
+            </div>
+        </div>
     </div>
     
-    <div>
-        <h2>Расчет стоимости</h2>
+    <div class="price">
+       <p><h2>Расчет стоимости</h2></p> 
         <form action="">
-        <h5>ТИП САЙТА</h5>
-        <select name="list1" id="list1">
-            <option value="opt1"> Сайт визитка</option>
-            <option value="opt2">Лендинг</option>
-            <option value="opt3">Интернет магазин</option>
-        </select>
-        <h5>ДИЗАЙН</h5>
-        <select name="list2" id="list2">
-            <option value="opt1">Дизайн 1</option>
-            <option value="opt2">Дизайн 2</option>
-            <option value="opt3">Дизайн 3</option>
-        </select>
-          <h5>АДАПТИВНОВСТЬ</h5>
-        <select name="list3" id="list3">
-            <option value="opt1">Вариант 1</option>
-            <option value="opt2">Вариант 2</option>
-            <option value="opt3">Вариант 3</option>
-        </select>
+
+            <div class="form">
+                <h5>Тип сайта</h5>
+                    <select name="list1" class="list">
+                        <option value="">Выберите пункт...</option>
+                        <option value="opt1"> Сайт визитка</option>
+                        <option value="opt2">Лендинг</option>
+                        <option value="opt3">Интернет магазин</option>
+                    </select>
+
+                <h5>Дизайн</h5>
+                    <select name="list2" class="list">
+                        <option value="">Выберите пункт...</option>
+                        <option value="opt1">Дизайн 1</option>
+                        <option value="opt2">Дизайн 2</option>
+                        <option value="opt3">Дизайн 3</option>
+                    </select>
+
+                <h5>Адаптивность</h5>
+                    <select name="list3" class="list">
+                        <option value="">Выберите пункт...</option>
+                        <option value="opt1">Вариант 1</option>
+                        <option value="opt2">Вариант 2</option>
+                        <option value="opt3">Вариант 3</option>
+                    </select>
+
+                    <div>
+                        <span id="line_gray"></span>
+                    </div>
+
+                    <div class="receipt">
+                        <p>Сроки 0</p>
+                        <p>Стоимость 0</p>
+                    </div>
+            </div>
+
         </form>
-        <ul>
-            <li><h2>120</h2><br>СЧАСТЛИВЫХ КЛИЕНТОВ</li>
-            <li><h2>4,600</h2><br>ЧАСОВ РАБОТЫ</li>
-            <li><h2>340</h2><br>ПРОЕКТОВ ЗАВЕРШЕНО</li>
-            <li><h2>23</h2><br>НАГРАД ПОЛУЧЕНО</li>
-        </ul>
+    </div>
+
+    <div class="statistics">
+        <h2>Немного статистики</h2>
+        <span id="line"></span>
+
+        <div class="stat">
+            <div class="unit">
+                <img src="img/smile.png" alt="Изображение">
+                <p class="number">120</p>
+                <p class="word">Счастливых клиентов</p>
+            </div>
+    
+            <div class="unit">
+                <img src="img/bkt.png" alt="Изображение">
+                <p class="number">4,600</p>
+                <p class="word">Часов работы</p>
+            </div>
+    
+            <div class="unit">
+                <img src="/img/check mark.png" alt="Изображение">
+                <p class="number">340</p>
+                <p class="word">Проектов завершено</p>
+            </div>
+    
+            <div class="unit">
+                <img src="/img/cup.png" alt="Изображение">
+                <p class="number">23</p>
+                <p class="word">Наград получено</p>
+            </div>
+        </div>
+        
     </div>
     
-    <div>
-        <h2>ОТЗЫВЫ</h2>
-        <img src="img/%D1%84%D0%BE%D1%82%D0%BA%D0%B03.png" alt="Изображение">
+    <div class="reviews">
+        
+        <h2>Отзывы</h2>
+        <span id="line"></span>
+
+        <p><img src="img/foto_2.png" alt="Изображение"></p>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante <br> facilisis bibendum dolor feugiat at duis sed dapidus leo nec ornare diam.</p>
-        <p><b>Михаил</b>, Ген директор ПАО “Газпром”.</p>
+        <p><span>Михаил,</span> Ген директор ПАО “Газпром”.</p>
+
+        <div class="point">
+            <span id="orange"></span>
+            <span></span>
+            <span></span>
+        </div>
     </div>
     
-    <div>
-        <h2>МОИ КОНТАКТЫ</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed dapibus leo nec ornare diamcoccodo </p>
-        <ul>
-            <li>Санкт-Петербург<br>Невский проспект 11</li>
-            <li>info@companyname.com</li>
-            <li>+7 999 999-99-99</li>
-        </ul>
-        <p><b>ОСТАВЬТЕ МНЕ СООБЩЕНИЕ</b></p>
-        <input type="text" placeholder="Имя">
-        <input type="text" placeholder="Email"> <br>
-        <p><textarea name="text" id="text" cols="45" rows="5" placeholder="Сообщение"></textarea></p><br>
-        <input type="submit" value="Отправить"><br>
-        <p><a href="https://ru.wikipedia.org/wiki/Meta_Platforms" target="_blank"><img src="img/%D1%84%D0%B1.png" alt="Ссылка"></a>
-        <a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B2%D0%B8%D1%82%D1%82%D0%B5%D1%80" target="_blank"><img src="img/%D1%82%D0%B2%D0%B8%D1%82%D0%B5%D1%80.png" alt="Ссылка"></a>
-        <a href="https://www.google.com/search?q=%D0%BC%D1%8F%D1%87&sxsrf=APq-WBt2WQOr_J4cYVjIWR5e3GEeVHk1iw:1646215145763&source=lnms&tbm=isch&sa=X&ved=2ahUKEwi8q_Knlaf2AhVpposKHduBC8cQ_AUoAXoECAIQAw&cshid=1646215158130464&biw=1920&bih=937&dpr=1" target="_blank"><img src="img/%D0%BC%D1%8F%D1%87.png" alt="Ссылка"></a>
-        <a href="https://github.com/" target="_blank"><img src="img/%D0%BA%D0%B8%D1%81%D0%B0.png" alt="Ссылка"></a>
-        <a href="https://www.instagram.com/" target="_blank"><img src="img/%D0%B8%D0%BD%D1%81%D1%82.png" alt="Ссылка"></a>
-        <a href="https://www.google.com/search?q=in&oq=in&aqs=chrome.0.69i59l2j0i131i433i512j69i60l5.494j0j7&sourceid=chrome&ie=UTF-8" target="_blank"><img src="img/%D0%B8%D0%BD.png" alt=""></a></p>
+    <div class="connection">
+        <div class="contacts">
+            <h2>Мои контакты</h2>
+            <span id="line"></span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed dapibus leo nec ornare diamcoccodo </p>
+        </div>
+        
+        <div class="info">
+            <div>
+                <img src="img/geo.png" alt="Иконка">
+                <p>Санкт-Петербург<br>Невский проспект 11</p>
+            </div>
+
+            <div>
+                <img src="img/mail.png" alt="Иконка">
+                <p>info@companyname.com</p>
+            </div>
+
+            <div>
+                <img src="img/phone.png" alt="Иконка">
+                <p>+7 999 999-99-99</p>
+            </div>
+        </div>
+        
+        <div class="message">
+            <p>Оставьте мне сообщение</p>
+
+            <input type="text" placeholder="Имя" class="count">
+            <input type="text" placeholder="Email" class="count"> <br>
+            <textarea name="text" id="text" cols="45" rows="5" placeholder="Сообщение"></textarea><br>
+
+            <input type="submit" value="Отправить" class="send">
+        </div>
+        
+        <div class="links">
+            <a href="https://www.facebook.com/" target="_blank"><img src="img/fb.png" alt="Ссылка"></a>
+            <a href="https://twitter.com/?lang=ru" target="_blank"><img src="img/twit.png" alt="Ссылка"></a>
+            <a href="https://dribbble.com/" target="_blank"><img src="img/drib.png" alt="Ссылка"></a>
+            <a href="https://github.com/" target="_blank"><img src="img/git.png" alt="Ссылка"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="img/inst.png" alt="Ссылка"></a>
+            <a href="https://ru.linkedin.com/" target="_blank"><img src="img/in.png" alt=""></a>
+        </div>
+        
     </div>
         
     <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d721270.118894446!2d30.19886183873445!3d60.04414986057049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696311ab9f1d71d%3A0x11442eb618bdb52f!2z0J3QtdCy0YHQutC40Lkg0L_RgC4sIDExLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1646214488004!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.734961632457!2d30.313203216173388!3d59.936539969229884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696311ab9f1d71d%3A0x11442eb618bdb52f!2z0J3QtdCy0YHQutC40Lkg0L_RgC4sIDExLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1647325867886!5m2!1sru!2sru" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
+
     <footer>
         <p>Copyright © 2021 Андрей Браун. Design by Web</p>
     </footer>
