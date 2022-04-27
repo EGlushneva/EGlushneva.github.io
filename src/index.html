@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Андрей Браун - Веб-разработчик</title>
 </head>
@@ -35,14 +36,14 @@
                     </div>
                     <div
                         class="px-0 col-xxl-6 col-xl-7 col-lg-8 offset-xxl-4 offset-xl-2 offset-lg-1 d-none d-lg-block">
-                        <div class="menu">
-                            <ul>
-                                <li><a href="#">Обо мне</a></li>
-                                <li><a href="#">Услуги</a></li>
-                                <li><a href="#">Кейсы</a></li>
-                                <li><a href="#">Прайс</a></li>
-                                <li><a href="#">Отзывы</a></li>
-                                <li><a href="#">Контакты</a></li>
+                        <div>
+                            <ul class="menu">
+                                <li><a href="#iddescription" class="active">Обо мне</a></li>
+                                <li><a href="#idskills">Услуги</a></li>
+                                <li><a href="#idcases">Кейсы</a></li>
+                                <li><a href="#idprice">Прайс</a></li>
+                                <li><a href="#idreviews">Отзывы</a></li>
+                                <li><a href="#idconnection">Контакты</a></li>
                             </ul>
                         </div>
                     </div>
@@ -54,12 +55,12 @@
                             </a>
 
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                <li><a class="dropdown-item" href="#">Обо мне</a></li>
-                                <li><a class="dropdown-item" href="#">Услуги</a></li>
-                                <li><a class="dropdown-item" href="#">Кейсы</a></li>
-                                <li><a class="dropdown-item" href="#">Прайс</a></li>
-                                <li><a class="dropdown-item" href="#">Отзывы</a></li>
-                                <li><a class="dropdown-item" href="#">Контакты</a></li>
+                                <li><a class="dropdown-item" href="#iddescription">Обо мне</a></li>
+                                <li><a class="dropdown-item" href="#idskills">Услуги</a></li>
+                                <li><a class="dropdown-item" href="#idcases">Кейсы</a></li>
+                                <li><a class="dropdown-item" href="#idprice">Прайс</a></li>
+                                <li><a class="dropdown-item" href="#idreviews">Отзывы</a></li>
+                                <li><a class="dropdown-item" href="#idconnection">Контакты</a></li>
                             </ul>
                         </div>
                     </div>
@@ -71,6 +72,13 @@
     </header>
 
     <main>
+
+        <div id="myModal">
+            <p>Оставьте заявку в течении следующих 15 минут и получите скидку на заказ 15% !</p>
+            <span id="myModal__close" class="close">ₓ</span>
+        </div>
+        <div id="myOverlay"></div>
+
         <section class="main">
             <div class="container h-100">
                 <div class="row align-items-center h-100">
@@ -78,15 +86,15 @@
                         <div class="title_container mt-5">
                             <h1>Привет <br> Я Андрей Браун</h1>
                             <h4>Фулл стек веб-разработчик</h4>
-                            <input type="button" value="Обо мне">
-                            <input type="button" value="Мои работы">
+                            <a href="#iddescription"><input type="button" value="Обо мне"></a>
+                            <a href="#idcases"><input type="button" value="Мои работы"></a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="description">
+        <section class="description" class="section" id="iddescription">
             <h2>Обо мне</h2>
             <span id="line"></span>
 
@@ -104,7 +112,7 @@
 
         </section>
 
-        <section class="skills">
+        <section class="skills" id="idskills" class="section">
             <h2>Что я умею</h2>
             <span id="line"></span>
 
@@ -138,15 +146,15 @@
             </div>
         </section>
 
-        <section class="cases">
+        <section class="cases" id="idcases" class="section">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg">
+                    <div class="col">
                         <div class="cases_title">
                             <h2>Кейсы</h2>
                             <span id="line"></span>
 
-                            <div class="row justify-content-center">
+                            <div class="row justify-content-center ml-5">
                                 <div class="col-lg-8 md-6 my-5">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed Dapibus leo nec
                                         ornare diamcoccodo nibh ante facilisis.</p>
@@ -155,8 +163,11 @@
                         </div>
 
                         <div class="row">
-                            <div class="col pb-5">
-                                <img src="img/examp.jpg" alt="Изображение" class="examp">
+                            <div class="col-lg-12 md-6 pb-5">
+                                <a class="image-popup-vertical-fit" href="img/examp.jpg" title="Пример сайта.">
+                                    <img src="img/examp_bad.jpg">
+                                </a>
+                                </a>
                             </div>
                         </div>
 
@@ -167,7 +178,7 @@
 
                                 <p class="m-0">Website:</p>
                                 <span>http://www.somedomain.com</span> <br>
-                                <input type="submit" value="Перейти на сайт" class="but_green mt-5">
+                                <input type="submit" value="Перейти на сайт" class="but_green mt-3">
                             </div>
 
                             <div class="name_project col-lg-9 md-12 offset-lg-1 md-0 justify-content-center pb-5">
@@ -191,54 +202,57 @@
             </div>
         </section>
 
+        <div id="idprice" class="section"></div>
         <section class="price">
-            <form action="#" class="form">
+            <div id="sum">
+                <form action="#" class="form">
 
-                <p>
-                <h2>Расчет стоимости</h2>
-                </p>
+                    <p>
+                    <h2>Расчет стоимости</h2>
+                    </p>
 
-                <h5>Тип сайта</h5>
-                <select name="list1" class="list">
-                    <option value="">Выберите пункт...</option>
-                    <option value="opt1"> Сайт визитка</option>
-                    <option value="opt2">Лендинг</option>
-                    <option value="opt3">Интернет магазин</option>
-                </select>
+                    <h5>Тип сайта</h5>
+                    <select name="list1" class="list" id="type">
+                        <option value="">Выберите пункт...</option>
+                        <option value="5000"> Сайт визитка</option>
+                        <option value="8000">Лендинг</option>
+                        <option value="15000">Интернет магазин</option>
+                    </select>
 
-                <h5>Дизайн</h5>
-                <select name="list2" class="list">
-                    <option value="">Выберите пункт...</option>
-                    <option value="opt1">Дизайн 1</option>
-                    <option value="opt2">Дизайн 2</option>
-                    <option value="opt3">Дизайн 3</option>
-                </select>
+                    <h5>Дизайн</h5>
+                    <select name="list2" class="list" id="design">
+                        <option value="">Выберите пункт...</option>
+                        <option value="5000">Минимализм</option>
+                        <option value="5000">Классический</option>
+                        <option value="10000">Усложненный</option>
+                    </select>
 
-                <h5>Адаптивность</h5>
-                <select name="list3" class="list">
-                    <option value="">Выберите пункт...</option>
-                    <option value="opt1">Вариант 1</option>
-                    <option value="opt2">Вариант 2</option>
-                    <option value="opt3">Вариант 3</option>
-                </select>
+                    <h5>Адаптивность</h5>
+                    <select name="list3" class="list" id="adaptability">
+                        <option value="">Выберите пункт...</option>
+                        <option value="5000">Фиксированный</option>
+                        <option value="7000">Гибкий</option>
+                        <option value="10000">Адаптивный</option>
+                    </select>
 
-                <div>
-                    <span id="line_gray"></span>
-                </div>
+                    <div>
+                        <span id="line_gray"></span>
+                    </div>
 
-                <table class="receipt">
-                    <tr>
-                        <th>Сроки</th>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <th>Стоимость</th>
-                        <td>0</td>
-                    </tr>
-                </table>
+                    <table class="receipt">
+                        <tr>
+                            <th>Сроки</th>
+                            <td id="term">0</td>
+                        </tr>
+                        <tr>
+                            <th>Стоимость</th>
+                            <td id="cost">0</td>
+                        </tr>
+                    </table>
 
-                <input type="reset" value="Оставить заявку" class="but_green">
-            </form>
+                    <input type="reset" value="Оставить заявку" class="but_green" id="yourEmail">
+                </form>
+            </div>
         </section>
 
         <section class="statistics">
@@ -254,7 +268,7 @@
 
                 <div class="unit">
                     <img src="img/bkt.png" alt="Изображение">
-                    <p class="number">4,600</p>
+                    <p class="number">4600</p>
                     <p class="word">Часов работы</p>
                 </div>
 
@@ -273,33 +287,61 @@
 
         </section>
 
-        <section class="reviews">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 sm-4">
-                        <h2>Отзывы</h2>
-                        <span id="line"></span>
+        <section class="reviews" id="idreviews" class="section">
 
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+
+                <h2>Отзывы</h2>
+                <span id="line"></span>
+
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
                         <p><img src="img/foto_2.png" alt="Изображение"></p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare
                             diam. Sed
                             commodo
                             nibh ante <br> facilisis bibendum dolor feugiat at duis sed dapidus leo nec ornare diam.</p>
                         <p><span>Михаил,</span> Ген директор ПАО “Газпром”.</p>
-
-                        <div class="point">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <p><img src="img/foto_3.png" alt="Изображение"></p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare
+                            diam. Sed
+                            commodo
+                            nibh ante <br> facilisis bibendum dolor feugiat at duis sed dapidus leo nec ornare diam.</p>
+                        <p><span>Валерий,</span> Бизнесмен.</p>
+                    </div>
+                    <div class="carousel-item">
+                        <p><img src="img/foto_4.png" alt="Изображение"></p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare
+                            diam. Sed
+                            commodo
+                            nibh ante <br> facilisis bibendum dolor feugiat at duis sed dapidus leo nec ornare diam.</p>
+                        <p><span>Евгений,</span> Работник ЖЭКа.</p>
                     </div>
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Предыдущий</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Следующий</span>
+                </button>
             </div>
-
-
         </section>
 
-        <section class="connection">
+        <section class="connection" id="idconnection" class="section">
             <div class="contacts">
                 <h2>Мои контакты</h2>
                 <span id="line"></span>
@@ -367,7 +409,11 @@
         }
     </script>
 
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery.spincrement.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/myScript.js"></script>
 </body>
 
 </html>
