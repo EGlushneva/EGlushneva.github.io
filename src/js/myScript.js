@@ -21,25 +21,66 @@
 
 
 //НАЧАЛО
-$(function() {
 
-    var pathname_url = window.location.pathname;
-    var href_url = window.location.href;
+window.onload = function () {
+    document.body.classList.add('loaded_hiding');
+    window.setTimeout(function () {
+        document.body.classList.add('loaded');
+        document.body.classList.remove('loaded_hiding');
+    }, 500);
+}
 
-    $(".menu").each(function () {
+new WOW().init();
 
-        var link = $(this).find("a").attr("href");
+$(document).ready(() => {
+    $(window).scroll(() => {
 
-        if(pathname_url == link || href_url == link) {
+        let scrollDistance = $(window).scrollTop();
 
-            $('.menu li').addClass("active");
+        $('section').each((i, el) => {
 
-        }
+            if ($(el).offset().top - $("nav").outerHeight() <= scrollDistance) {
 
+                $('nav a').each((i, el) => {
+
+                    if ($(el).hasClass('active')) {
+                        $(el).removeClass('active')
+                    }
+                });
+                $('ul.menu li').eq(i).find('a').addClass('active');
+            }
+        });
     });
 
 });
 
+//меню
+var scroll_start = 0;
+   var startchange = $('.nav');
+   var offset = startchange.offset();
+   $(document).scroll(function() { 
+      scroll_start = $(this).scrollTop();
+      if(scroll_start > offset.top) {
+          $('.nav').css('background-color', 'rgba(255,255,255)');
+          $('.logo a').css('color', '#352C41');
+          $('.menu li a').css('color', '#A16195');
+          $('.menu li a.active').css('color', '#352C41');
+          $('.menu li a:hover').css('color', '#352C41');
+       } else {
+          $('.nav').css('background-color', 'transparent');
+          $('.logo a').css('color', '#fff');
+          $('.menu li a').css('color', '#fff');
+          $('.menu li a.active').css('color', '#fff');
+          $('.menu li a:hover').css('color', '#352C41');
+       }
+   });
+
+//линия
+$('h2').hover(() => {
+    $('.line').css('width', '140px')
+}, () => {
+    $('.line').css('width', '70px')
+});
 
 //калькулятор
 $('.list').change(sum);
@@ -70,10 +111,11 @@ function sum() {
 }
 
 $('#yourEmail').click(() => {
-    prompt('Укажите Ваш e-mail');
     $('#term').text('0');
     $('#cost').text('0');
 });
+
+$("#inputPhone").mask("+7(999) 999-9999");
 
 
 //Анимация цифр
@@ -109,14 +151,14 @@ $('.image-popup-vertical-fit').magnificPopup({
 });
 
 //Всплывающее окнo
-setTimeout(function show() {
-    $('#myOverlay').css('display', 'block');
-    $('#myModal').css('display', 'block').animate({opacity: 1}, 198);
-}, 15000);
+// setTimeout(function show() {
+//     $('#myOverlay').css('display', 'block');
+//     $('#myModal').css('display', 'block').animate({ opacity: 1 }, 198);
+// }, 5000);
 
-  $('#myModal__close, #myOverlay').click( function(){
-    $('#myModal').animate({opacity: 0}, 198, function(){
-      $(this).css('display', 'none');
-      $('#myOverlay').fadeOut(297);
-    });
-  });
+// $('#myModal__close, #myOverlay').click(function () {
+//     $('#myModal').animate({ opacity: 0 }, 198, function () {
+//         $(this).css('display', 'none');
+//         $('#myOverlay').fadeOut(297);
+//     });
+// });

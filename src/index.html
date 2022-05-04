@@ -9,10 +9,16 @@
     <meta property="og:title" content="Это моя первая страница...">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,500;0,600;0,700;1,200;1,300&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="css/style.css">
-    <title>Андрей Браун - Веб-разработчик</title>
+    <title>Евгения Глушнева - Веб-разработчик</title>
 </head>
 
 <body>
@@ -28,14 +34,14 @@
     </div>
 
     <header>
-        <nav>
+        <nav class="nav">
             <div class="container">
                 <div class="row">
-                    <div class="col-xxl-2 col-lg-3 col-7">
-                        <div class="logo">Андрей Браун</div>
+                    <div class="col-xxl-3 col-lg-3 col-7">
+                        <div class="logo"><a href="#main">Евгения Глушнева</a></div>
                     </div>
                     <div
-                        class="px-0 col-xxl-6 col-xl-7 col-lg-8 offset-xxl-4 offset-xl-2 offset-lg-1 d-none d-lg-block">
+                        class="px-0 col-xxl-6 col-xl-7 col-lg-8 offset-xxl-3 offset-xl-2 offset-lg-1 d-none d-lg-block">
                         <div>
                             <ul class="menu">
                                 <li><a href="#iddescription" class="active">Обо мне</a></li>
@@ -79,66 +85,156 @@
         </div>
         <div id="myOverlay"></div>
 
-        <section class="main">
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Свяжитесь с нами!</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                        <form action="php/mail.php" method="post">
+                            <div class="row mb-3">
+                                <label for="inputEmail3" class="col-sm-2 col-form-label">Имя</label>
+                                <div class="col-sm-10">
+                                    <input type="name" required class="form-control" id="inputName">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                                <div class="col-sm-10">
+                                    <input type="email" name="user_email" required class="form-control"
+                                        id="inputEmail3">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="inputPassword3" class="col-sm-2 col-form-label">Телефон</label>
+                                <div class="col-sm-10">
+                                    <input type="phone" name="user_phone" required class="form-control" id="inputPhone">
+                                </div>
+                            </div>
+                            <fieldset class="row mb-3">
+                                <legend class="col-form-label col-sm-6 pt-2">Вы впервые на нашем сайте?</legend>
+                                <div class="col">
+                                    <div class="form-check col-sm-2">
+                                        <input class="form-check-input" type="radio" name="radios" id="gridRadios1"
+                                            value="yes" checked>
+                                        <label class="form-check-label" for="gridRadios1">
+                                            Да
+                                        </label>
+                                    </div>
+                                    <div class="form-check col-sm-3">
+                                        <input class="form-check-input" type="radio" name="radios" id="gridRadios2"
+                                            value="no">
+                                        <label class="form-check-label" for="gridRadios2">
+                                            Нет
+                                        </label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <div class="row mb-3">
+                                <div class="col-sm-10 offset-sm-1">
+                                    <div class="form-check">
+                                        <input class="form-check-input" name="check" type="checkbox" id="gridCheck1">
+                                        <label class="form-check-label" for="gridCheck1">
+                                            Пользовательское соглашение
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Отправить</button>
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="main" id="main">
             <div class="container h-100">
                 <div class="row align-items-center h-100">
-                    <div class="col-lg-6 mt-5 pt-5">
+                    <div class="col-lg-8 mt-5 pt-5">
                         <div class="title_container mt-5">
-                            <h1>Привет <br> Я Андрей Браун</h1>
-                            <h4>Фулл стек веб-разработчик</h4>
-                            <a href="#iddescription"><input type="button" value="Обо мне"></a>
-                            <a href="#idcases"><input type="button" value="Мои работы"></a>
+                            <h1 class="animate__animated animate__fadeInUp">Привет <br> Я Евгения Глушнева</h1>
+                            <h4 class="animate__animated animate__fadeInUp animate__delay-1s">Фулл стек веб-разработчик
+                            </h4>
+                            <a href="#iddescription"><input
+                                    class="animate__animated animate__fadeInUp animate__delay-2s" type="button"
+                                    value="Обо мне"></a>
+                            <a href="#idcases"><input
+                                    class="animate__animated animate__fadeInUp animate__delay-3s type=" button"
+                                    value="Мои работы"></a>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <section class="description" class="section" id="iddescription">
-            <h2>Обо мне</h2>
-            <span id="line"></span>
+        <section class="description" id="iddescription">
+            <h2 class="wow animate__animated animate__fadeInUp">Обо мне</h2>
+            <span class="line"></span>
 
             <div class="content_description">
-                <img class="foto" src="img/foto.png" alt="Изображение">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed
-                    commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo
-                    nibh.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed
-                    commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo
-                    nibh.</p>
-                <input type="submit" value="Скачать резюме" class="button">
+                <div class="imgDescriot">
+                    <img class="shekspir" src="img/shekspir.png" alt="Изображение">
+                    <img class="foto" src="img/photo.png" alt="Изображение">
+                    <input type="submit" value="Скачать резюме" class="button">
+                </div>
+
+                <div class="myDescript">
+                    <div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare
+                            diam.
+                            Sed
+                            commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam
+                            commodo
+                            nibh.</p>
+                    </div>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare
+                            diam.
+                            Sed
+                            commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam
+                            commodo
+                            nibh.</p>
+                    </div>
+                </div>
             </div>
 
 
         </section>
 
-        <section class="skills" id="idskills" class="section">
-            <h2>Что я умею</h2>
-            <span id="line"></span>
+        <section class="skills" id="idskills">
+            <h2 class="wow animate__animated animate__fadeInUp">Что я умею</h2>
+            <span class="line"></span>
 
             <div class="big_block">
                 <div class="block">
-                    <img src="img/laptop.png" alt="Изображение">
+                    <img src="img/kist.png" alt="Изображение">
                     <p>Веб-дизайн</p>
                     <span>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque
                         etiam.</span>
                 </div>
 
                 <div class="block">
-                    <img src="img/sign.png" alt="Изображение">
+                    <img src="img/kod.png" alt="Изображение">
                     <p>Разработка</p>
                     <span>Lorem ipsum dolor sit amet placerat facilisis mi in tempus eleifend pellentesque.</span>
                 </div>
 
                 <div class="block">
-                    <img src="img/rocket.png" alt="Изображение">
+                    <img src="img/petli.png" alt="Изображение">
                     <p>CEO-Оптимизация</p>
                     <span>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque
                         etiam.</span>
                 </div>
 
                 <div class="block">
-                    <img src="img/gramophone.png" alt="Изображение">
+                    <img src="img/strelka.png" alt="Изображение">
                     <p>Маркетинг</p>
                     <span>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque
                         natoque.</span>
@@ -146,13 +242,13 @@
             </div>
         </section>
 
-        <section class="cases" id="idcases" class="section">
+        <section class="cases" id="idcases">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col">
                         <div class="cases_title">
-                            <h2>Кейсы</h2>
-                            <span id="line"></span>
+                            <h2 class="wow animate__animated animate__fadeInUp">Кейсы</h2>
+                            <span class="line"></span>
 
                             <div class="row justify-content-center ml-5">
                                 <div class="col-lg-8 md-6 my-5">
@@ -164,8 +260,8 @@
 
                         <div class="row">
                             <div class="col-lg-12 md-6 pb-5">
-                                <a class="image-popup-vertical-fit" href="img/examp.jpg" title="Пример сайта.">
-                                    <img src="img/examp_bad.jpg">
+                                <a class="image-popup-vertical-fit" href="img/site.jpg" title="Пример сайта.">
+                                    <img src="img/site_bad.jpg">
                                 </a>
                                 </a>
                             </div>
@@ -202,10 +298,10 @@
             </div>
         </section>
 
-        <div id="idprice" class="section"></div>
-        <section class="price">
+        <section id="idprice"></section>
+        <div class="price">
             <div id="sum">
-                <form action="#" class="form">
+                <form action="php/mail.php" method="post" class="form">
 
                     <p>
                     <h2>Расчет стоимости</h2>
@@ -250,49 +346,51 @@
                         </tr>
                     </table>
 
-                    <input type="reset" value="Оставить заявку" class="but_green" id="yourEmail">
+                    <input type="reset" value="Оставить заявку" class="but_green" id="yourEmail" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
                 </form>
             </div>
-        </section>
+        </div>
 
-        <section class="statistics">
-            <h2>Немного статистики</h2>
-            <span id="line"></span>
+        <div class="statistics">
+            <h2 class="wow animate__animated animate__fadeInUp">Немного статистики</h2>
+            <span class="line"></span>
 
             <div class="stat">
                 <div class="unit">
-                    <img src="img/smile.png" alt="Изображение">
+                    <img src="img/ic_1.png" alt="Изображение">
                     <p class="number">120</p>
                     <p class="word">Счастливых клиентов</p>
                 </div>
 
                 <div class="unit">
-                    <img src="img/bkt.png" alt="Изображение">
+                    <img src="img/ic_2.png" alt="Изображение">
                     <p class="number">4600</p>
                     <p class="word">Часов работы</p>
                 </div>
 
                 <div class="unit">
-                    <img src="img/check mark.png" alt="Изображение">
+                    <img src="img/ic_3.png" alt="Изображение">
                     <p class="number">340</p>
                     <p class="word">Проектов завершено</p>
                 </div>
 
                 <div class="unit">
-                    <img src="img/cup.png" alt="Изображение">
+                    <img src="img/ic_4.png" alt="Изображение">
                     <p class="number">23</p>
                     <p class="word">Наград получено</p>
                 </div>
             </div>
 
-        </section>
+        </div>
 
-        <section class="reviews" id="idreviews" class="section">
+        <section id="idreviews"></section>
+        <div class="reviews">
 
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 
-                <h2>Отзывы</h2>
-                <span id="line"></span>
+                <h2 class="wow animate__animated animate__fadeInUp">Отзывы</h2>
+                <span class="line"></span>
 
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
@@ -308,7 +406,8 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare
                             diam. Sed
                             commodo
-                            nibh ante <br> facilisis bibendum dolor feugiat at duis sed dapidus leo nec ornare diam.</p>
+                            nibh ante <br> facilisis bibendum dolor feugiat at duis sed dapidus leo nec ornare diam.
+                        </p>
                         <p><span>Михаил,</span> Ген директор ПАО “Газпром”.</p>
                     </div>
                     <div class="carousel-item">
@@ -316,7 +415,8 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare
                             diam. Sed
                             commodo
-                            nibh ante <br> facilisis bibendum dolor feugiat at duis sed dapidus leo nec ornare diam.</p>
+                            nibh ante <br> facilisis bibendum dolor feugiat at duis sed dapidus leo nec ornare diam.
+                        </p>
                         <p><span>Валерий,</span> Бизнесмен.</p>
                     </div>
                     <div class="carousel-item">
@@ -324,7 +424,8 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare
                             diam. Sed
                             commodo
-                            nibh ante <br> facilisis bibendum dolor feugiat at duis sed dapidus leo nec ornare diam.</p>
+                            nibh ante <br> facilisis bibendum dolor feugiat at duis sed dapidus leo nec ornare diam.
+                        </p>
                         <p><span>Евгений,</span> Работник ЖЭКа.</p>
                     </div>
                 </div>
@@ -339,30 +440,34 @@
                     <span class="visually-hidden">Следующий</span>
                 </button>
             </div>
-        </section>
+        </div>
 
-        <section class="connection" id="idconnection" class="section">
+        <section class="connection" id="idconnection">
             <div class="contacts">
-                <h2>Мои контакты</h2>
-                <span id="line"></span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed dapibus leo nec ornare diamcoccodo
+                <h2 class="wow animate__animated animate__fadeInUp">Мои контакты</h2>
+                <span class="line"></span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed dapibus leo nec ornare
+                    diamcoccodo
                 </p>
             </div>
 
             <div class="info">
-                <div>
-                    <img src="img/geo.png" alt="Иконка">
-                    <p>Санкт-Петербург<br>Невский проспект 11</p>
+                <div class="blockRound"><a href="#map">
+                        <img src="img/geo.png" alt="Иконка">
+                        <p>Санкт-Петербург<br>Невский проспект 11</p>
+                    </a>
                 </div>
 
-                <div>
-                    <img src="img/mail.png" alt="Иконка">
-                    <p>info@companyname.com</p>
+                <div class="blockRound" id="blockEmail"><a href="mailto:eva.glushneva@mail.ru">
+                        <img src="img/mail.png" alt="Иконка">
+                        <p>info@companyname.com</p>
+                    </a>
                 </div>
 
-                <div>
-                    <img src="img/phone.png" alt="Иконка">
-                    <p>+7 999 999-99-99</p>
+                <div class="blockRound"><a href=”tel:+79999999999”>
+                        <img src="img/phone.png" alt="Иконка">
+                        <p>+7 999 999-99-99</p>
+                    </a>
                 </div>
             </div>
 
@@ -386,7 +491,7 @@
             </div>
         </section>
 
-        <section class="map">
+        <section class="map" id="map">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.734961632457!2d30.313203216173388!3d59.936539969229884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696311ab9f1d71d%3A0x11442eb618bdb52f!2z0J3QtdCy0YHQutC40Lkg0L_RgC4sIDExLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1647325867886!5m2!1sru!2sru"
                 width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
@@ -396,23 +501,15 @@
     </main>
 
     <footer>
-        <p>Copyright © 2021 Андрей Браун. Design by Web</p>
+        <p>Copyright © 2022 Евгения Глушнева. Design by Web</p>
     </footer>
-
-    <script>
-        window.onload = function () {
-            document.body.classList.add('loaded_hiding');
-            window.setTimeout(function () {
-                document.body.classList.add('loaded');
-                document.body.classList.remove('loaded_hiding');
-            }, 500);
-        }
-    </script>
 
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/jquery.spincrement.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/wow.min.js"></script>
     <script src="js/myScript.js"></script>
 </body>
 
