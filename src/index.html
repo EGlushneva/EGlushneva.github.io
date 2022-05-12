@@ -81,7 +81,9 @@
 
         <div id="myModal">
             <p>Оставьте заявку в течении следующих 15 минут и получите скидку на заказ 15% !</p>
+            <img src="img/girl.png" alt="Стикер">
             <span id="myModal__close" class="close">ₓ</span>
+            
         </div>
         <div id="myOverlay"></div>
 
@@ -95,11 +97,11 @@
                     </div>
                     <div class="modal-body">
 
-                        <form action="php/mail.php" method="post">
+                        <form action="send.php" method="post">
                             <div class="row mb-3">
                                 <label for="inputEmail3" class="col-sm-2 col-form-label">Имя</label>
                                 <div class="col-sm-10">
-                                    <input type="name" required class="form-control" id="inputName">
+                                    <input type="name" name="user_name" required class="form-control" id="inputName">
                                 </div>
                             </div>
                             <div class="row mb-3">
@@ -157,17 +159,16 @@
         <div class="main" id="main">
             <div class="container h-100">
                 <div class="row align-items-center h-100">
-                    <div class="col-lg-8 mt-5 pt-5">
+                    <div class="col-lg-6 mt-5 pt-5">
                         <div class="title_container mt-5">
-                            <h1 class="animate__animated animate__fadeInUp">Привет <br> Я Евгения Глушнева</h1>
-                            <h4 class="animate__animated animate__fadeInUp animate__delay-1s">Фулл стек веб-разработчик
+                            <h1 class="animate__animated animate__fadeInUp">Хочешь сайт? <br> Тогда тебе к нам!</h1>
+                            <h4 class="animate__animated animate__fadeInUp animate__delay-1s">Верстка сайтов от Евгении
+                                Глушневой
                             </h4>
-                            <a href="#iddescription"><input
-                                    class="animate__animated animate__fadeInUp animate__delay-2s" type="button"
-                                    value="Обо мне"></a>
-                            <a href="#idcases"><input
-                                    class="animate__animated animate__fadeInUp animate__delay-3s type=" button"
-                                    value="Мои работы"></a>
+                            <a href="#idprice"><input class="animate__animated animate__fadeInUp animate__delay-2s"
+                                    type="button" value="Оставить заявку"></a>
+                            <a href="#idcases"><input class="animate__animated animate__fadeInUp animate__delay-3s"
+                                    type="button" value="Мои работы"></a>
                         </div>
                     </div>
                 </div>
@@ -179,7 +180,7 @@
             <span class="line"></span>
 
             <div class="content_description">
-                <div class="imgDescriot">
+                <div class="imgDescript">
                     <img class="shekspir" src="img/shekspir.png" alt="Изображение">
                     <img class="foto" src="img/photo.png" alt="Изображение">
                     <input type="submit" value="Скачать резюме" class="button">
@@ -187,20 +188,14 @@
 
                 <div class="myDescript">
                     <div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare
-                            diam.
-                            Sed
-                            commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam
-                            commodo
-                            nibh.</p>
+                        <p>Привет! Я Евгения Глушнева и я сделаю Ваш сайт!</p>
                     </div>
                     <div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare
-                            diam.
-                            Sed
-                            commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam
-                            commodo
-                            nibh.</p>
+                        <p>Мой путь в веб-разработке начался во время обучения в филологическом институте. Однажды я
+                            решила изучить что-то кардинально противоположное моей специальности и мой выбор пал на
+                            веб-разработку и 3D моделирование. Тогда я прошла курс в онлайн школе создания сайтов от
+                            Андрея Брауна. И вот я здесь! Готова сделать сайт для Вас или Вашей фирмы!
+                        </p>
                     </div>
                 </div>
             </div>
@@ -216,82 +211,129 @@
                 <div class="block">
                     <img src="img/kist.png" alt="Изображение">
                     <p>Веб-дизайн</p>
-                    <span>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque
-                        etiam.</span>
+                    <span>Разработка оригинального дизайна для Вашего сайта</span>
                 </div>
 
                 <div class="block">
                     <img src="img/kod.png" alt="Изображение">
                     <p>Разработка</p>
-                    <span>Lorem ipsum dolor sit amet placerat facilisis mi in tempus eleifend pellentesque.</span>
+                    <span>Верстка разного уровня адаптивности</span>
                 </div>
 
                 <div class="block">
                     <img src="img/petli.png" alt="Изображение">
                     <p>CEO-Оптимизация</p>
-                    <span>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque
-                        etiam.</span>
+                    <span>Увелечение видимости сайта в поисковых системах</span>
                 </div>
 
                 <div class="block">
                     <img src="img/strelka.png" alt="Изображение">
-                    <p>Маркетинг</p>
-                    <span>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque
-                        natoque.</span>
+                    <p>3D графика</p>
+                    <span>Создание 3D объекта ао Вашему запросу</span>
                 </div>
             </div>
         </section>
 
         <section class="cases" id="idcases">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col">
-                        <div class="cases_title">
-                            <h2 class="wow animate__animated animate__fadeInUp">Кейсы</h2>
-                            <span class="line"></span>
 
-                            <div class="row justify-content-center ml-5">
-                                <div class="col-lg-8 md-6 my-5">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed Dapibus leo nec
-                                        ornare diamcoccodo nibh ante facilisis.</p>
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <div class="cases_title">
+                                <h2 class="wow animate__animated animate__fadeInUp">Кейсы</h2>
+                                <span class="line"></span>
+
+                                <div class="row justify-content-center ml-5">
+                                    <div class="col-lg-8 md-6 justify-content-center">
+                                        <p>Здесь Вы можете ознакомиться с моими работами</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="row">
-                            <div class="col-lg-12 md-6 pb-5">
-                                <a class="image-popup-vertical-fit" href="img/site.jpg" title="Пример сайта.">
-                                    <img src="img/site_bad.jpg">
-                                </a>
-                                </a>
+
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-lg-12 md-6 pb-5">
+                                            <a class="image-popup-vertical-fit" href="img/site.jpg"
+                                                title="Пример сайта">
+                                                <img src="img/site_bad.jpg">
+                                            </a>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="client col-lg-2 md-2 pb-5">
+                                            
+                                            <a href="#main"><input type="submit" value="Перейти на сайт" class="but_green mt-3"></a>
+                                        </div>
+
+                                        <div
+                                            class="name_project col-lg-9 md-12 offset-lg-1 md-0 justify-content-center pb-5">
+                                            <p class="m-0">Мой первый проект</p>
+                                            <span>Данный сайт создавался постепенно во время обучения в онлайн школе
+                                                Андрея Брауна. В дальнейшем этот проект был переделан в данный
+                                                сайт.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-lg-12 md-6 pb-5">
+                                            <a class="image-popup-vertical-fit" href="img/chess.jpg"
+                                                title="Шахматы 3D модель">
+                                                <img src="img/chess_bad.jpg">
+                                            </a>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div
+                                            class="name_project col-lg-9 md-12 offset-lg-1 md-0 justify-content-center pb-5">
+                                            <p class="m-0">Шахматы 3D модель</p>
+                                            <span>Мой первый опыт в 3D моделировании.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-lg-12 md-6 pb-5">
+                                            <a class="image-popup-vertical-fit" href="img/test.jpg"
+                                                title="Первая работа в CSS">
+                                                <img src="img/test_bad.jpg">
+                                            </a>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="client col-lg-2 md-2 pb-5">
+                                            <a href="test.html"><input type="submit" value="Перейти на страницу" class="but_green mt-3"></a>
+                                        </div>
+
+                                        <div
+                                            class="name_project col-lg-9 md-12 offset-lg-1 md-0 justify-content-center pb-5">
+                                            <p class="m-0">Мое первое знакомство со стилями</p>
+                                            <span>На данной странице представлена моя первая попытка создания стилей для
+                                                сайта с помощью CSS.</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="client col-lg-2 md-2 pb-5">
-                                <p class="m-0">Client:</p>
-                                <span>Какая-то компания</span>
-
-                                <p class="m-0">Website:</p>
-                                <span>http://www.somedomain.com</span> <br>
-                                <input type="submit" value="Перейти на сайт" class="but_green mt-3">
-                            </div>
-
-                            <div class="name_project col-lg-9 md-12 offset-lg-1 md-0 justify-content-center pb-5">
-                                <p class="m-0">Название проекта</p>
-                                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit., sed do eiusmod
-                                    tempor
-                                    incididunt ut
-                                    labore et dolore magna
-                                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                                    nisi ut
-                                    aliquip ex ea
-                                    commodo consequat.
-                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                                    eu fugiat
-                                    nulla
-                                    pariatur.</span>
-                            </div>
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Предыдущий</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Следующий</span>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -301,7 +343,7 @@
         <section id="idprice"></section>
         <div class="price">
             <div id="sum">
-                <form action="php/mail.php" method="post" class="form">
+                <form action="send.php" method="post" class="form">
 
                     <p>
                     <h2>Расчет стоимости</h2>
@@ -403,28 +445,19 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <p><img src="img/foto_2.png" alt="Изображение"></p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare
-                            diam. Sed
-                            commodo
-                            nibh ante <br> facilisis bibendum dolor feugiat at duis sed dapidus leo nec ornare diam.
+                        <p>Здесь мог бы быть Ваш отзыв.
                         </p>
                         <p><span>Михаил,</span> Ген директор ПАО “Газпром”.</p>
                     </div>
                     <div class="carousel-item">
                         <p><img src="img/foto_3.png" alt="Изображение"></p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare
-                            diam. Sed
-                            commodo
-                            nibh ante <br> facilisis bibendum dolor feugiat at duis sed dapidus leo nec ornare diam.
+                        <p>Здесь мог бы быть Ваш отзыв.
                         </p>
                         <p><span>Валерий,</span> Бизнесмен.</p>
                     </div>
                     <div class="carousel-item">
                         <p><img src="img/foto_4.png" alt="Изображение"></p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare
-                            diam. Sed
-                            commodo
-                            nibh ante <br> facilisis bibendum dolor feugiat at duis sed dapidus leo nec ornare diam.
+                        <p>Здесь мог бы быть Ваш отзыв.
                         </p>
                         <p><span>Евгений,</span> Работник ЖЭКа.</p>
                     </div>
@@ -446,8 +479,7 @@
             <div class="contacts">
                 <h2 class="wow animate__animated animate__fadeInUp">Мои контакты</h2>
                 <span class="line"></span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed dapibus leo nec ornare
-                    diamcoccodo
+                <p>Будем на связи! Вы можете оставить мне сообщение с вопросом или пожеланием.
                 </p>
             </div>
 
@@ -460,34 +492,34 @@
 
                 <div class="blockRound" id="blockEmail"><a href="mailto:eva.glushneva@mail.ru">
                         <img src="img/mail.png" alt="Иконка">
-                        <p>info@companyname.com</p>
+                        <p>eva.glushneva@mail.ru</p>
                     </a>
                 </div>
 
-                <div class="blockRound"><a href=”tel:+79999999999”>
+                <div class="blockRound"><a href="tel:+7 (983) 308-64-11">
                         <img src="img/phone.png" alt="Иконка">
-                        <p>+7 999 999-99-99</p>
+                        <p>+7 983-308-64-11</p>
                     </a>
                 </div>
             </div>
 
-            <form class="message">
+            <form action="sendText.php" class="message">
                 <p>Оставьте мне сообщение</p>
 
-                <input type="text" placeholder="Имя" class="count">
-                <input type="email" placeholder="Email" class="count"> <br>
+                <input type="text" placeholder="Имя" class="count" name="user_name_two">
+                <input type="email" placeholder="Email" class="count" name="user_email_two"> <br>
                 <textarea name="text" id="text" cols="45" rows="5" placeholder="Сообщение"></textarea><br>
 
-                <input type="reset" value="Отправить" class="send">
+                <input type="submit" value="Отправить" class="send">
             </form>
 
             <div class="links">
-                <a href="https://www.facebook.com/" target="_blank"><img src="img/fb.png" alt="Ссылка"></a>
-                <a href="https://twitter.com/?lang=ru" target="_blank"><img src="img/twit.png" alt="Ссылка"></a>
-                <a href="https://dribbble.com/" target="_blank"><img src="img/drib.png" alt="Ссылка"></a>
-                <a href="https://github.com/" target="_blank"><img src="img/git.png" alt="Ссылка"></a>
-                <a href="https://www.instagram.com/" target="_blank"><img src="img/inst.png" alt="Ссылка"></a>
-                <a href="https://ru.linkedin.com/" target="_blank"><img src="img/in.png" alt=""></a>
+                <a href="https://www.facebook.com/e.glushneva" target="_blank"><img src="img/fb.png" alt="Ссылка"></a>
+                <a href="https://vk.com/e.glushneva" target="_blank"><img src="img/vk.png" alt="Ссылка"></a>
+                <a href="https://www.pinterest.ru/evgeniaglushneva/_saved/" target="_blank"><img src="img/pint.png" alt="Ссылка"></a>
+                <a href="https://github.com/EGlushneva" target="_blank"><img src="img/git.png" alt="Ссылка"></a>
+                <a href="https://t.me/ev_glu" target="_blank"><img src="img/teleg.png" alt="Ссылка"></a>
+                <a href="https://wa.me/79833086411" target="_blank"><img src="img/ws.png" alt=""></a>
             </div>
         </section>
 
@@ -502,6 +534,7 @@
 
     <footer>
         <p>Copyright © 2022 Евгения Глушнева. Design by Web</p>
+        <a href="https://www.flaticon.com/ru/free-icons/" title="куб иконки">Куб иконки от smashingstocks - Flaticon</a>
     </footer>
 
     <script src="js/jquery-3.6.0.min.js"></script>

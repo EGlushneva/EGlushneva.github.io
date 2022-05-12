@@ -75,13 +75,6 @@ var scroll_start = 0;
        }
    });
 
-//линия
-$('h2').hover(() => {
-    $('.line').css('width', '140px')
-}, () => {
-    $('.line').css('width', '70px')
-});
-
 //калькулятор
 $('.list').change(sum);
 
@@ -106,7 +99,7 @@ function sum() {
     } else if (result == 20000) {
         $('#term').text('14 дней');
     } else {
-        $('#term').text('30 дней');
+        $('#term').text('10 дней');
     };
 }
 
@@ -151,14 +144,42 @@ $('.image-popup-vertical-fit').magnificPopup({
 });
 
 //Всплывающее окнo
-// setTimeout(function show() {
-//     $('#myOverlay').css('display', 'block');
-//     $('#myModal').css('display', 'block').animate({ opacity: 1 }, 198);
-// }, 5000);
+setTimeout(function show() {
+    $('#myOverlay').css('display', 'block');
+    $('#myModal').css('display', 'block').animate({ opacity: 1 }, 198);
+}, 10000);
 
-// $('#myModal__close, #myOverlay').click(function () {
-//     $('#myModal').animate({ opacity: 0 }, 198, function () {
-//         $(this).css('display', 'none');
-//         $('#myOverlay').fadeOut(297);
-//     });
-// });
+$('#myModal__close, #myOverlay').click(function () {
+    $('#myModal').animate({ opacity: 0 }, 198, function () {
+        $(this).css('display', 'none');
+        $('#myOverlay').fadeOut(297);
+    });
+});
+
+//php
+// Отправка данных на сервер
+function send(event, php){
+    console.log("Отправка запроса");
+    event.preventDefault ? event.preventDefault() : event.returnValue = false;
+    var req = new XMLHttpRequest();
+    req.open('POST', php, true);
+    req.onload = function() {
+        if (req.status >= 200 && req.status < 400) {
+        json = JSON.parse(this.response); // Ебанный internet explorer 11
+            console.log(json);
+            
+            // ЗДЕСЬ УКАЗЫВАЕМ ДЕЙСТВИЯ В СЛУЧАЕ УСПЕХА ИЛИ НЕУДАЧИ
+            if (json.result == "success") {
+                // Если сообщение отправлено
+                alert("Сообщение отправлено");
+            } else {
+                // Если произошла ошибка
+                alert("Ошибка. Сообщение не отправлено");
+            }
+        // Если не удалось связаться с php файлом
+        } else {alert("Ошибка сервера. Номер: "+req.status);}}; 
+    
+    // Если не удалось отправить запрос. Стоит блок на хостинге
+    req.onerror = function() {alert("Ошибка отправки запроса");};
+    req.send(new FormData(event.target));
+    }
